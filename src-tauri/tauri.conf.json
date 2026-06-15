@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicedoc/schemas/main/schemas/tauri.config.schema.json",
+  "productName": "SSH Agent",
+  "version": "0.1.0",
+  "identifier": "com.ssha.desktop",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "SSH Agent",
+        "width": 1024,
+        "height": 600,
+        "minWidth": 1024,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": false,
+        "maximized": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "plugins": {
+    "shell": {
+      "open": true
+    }
+  }
+}

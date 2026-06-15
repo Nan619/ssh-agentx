@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-light);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* xterm.js terminal scrollbar */
+.xterm .xterm-viewport::-webkit-scrollbar {
+  width: 8px;
+}
+
+.xterm .xterm-viewport::-webkit-scrollbar-track {
+  background: var(--terminal-bg);
+}
+
+.xterm .xterm-viewport::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+.xterm .xterm-viewport::-webkit-scrollbar-thumb:hover {
+  background: var(--border-light);
+}
+
+.xterm .xterm-scrollable-element::-webkit-scrollbar {
+  width: 8px;
+}
+
+.xterm .xterm-scrollable-element::-webkit-scrollbar-track {
+  background: var(--terminal-bg);
+}
+
+.xterm .xterm-scrollable-element::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+.xterm .xterm-scrollable-element::-webkit-scrollbar-thumb:hover {
+  background: var(--border-light);
+}
+
+/* Toast slide-in animation */
+@keyframes toast-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Status dot pulse animation (connecting state) */
+@keyframes status-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Agent chat cursor blink */
+@keyframes blink {
+  50% { opacity: 0; }
+}

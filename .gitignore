@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+src-tauri/target/
+
+# IDE
+.claude/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Typescript build info
+tsconfig.tsbuildinfo
+
+# Cargo build config (contains local paths)
+.cargo/
+
+# Tauri generated schemas
+src-tauri/gen/
+
+# Visual brainstorming sessions
+.superpowers/

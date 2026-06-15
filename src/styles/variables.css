@@ -1,0 +1,166 @@
+/* ===== Layout & Typography (theme-agnostic) ===== */
+:root {
+  --activity-bar-width: 48px;
+  --sidebar-min-width: 200px;
+  --sidebar-default-width: 280px;
+  --agent-panel-min-width: 280px;
+  --agent-panel-default-width: 360px;
+  --status-bar-height: 24px;
+  --tab-height: 36px;
+
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Cascadia Code", "Fira Code", "JetBrains Mono", Consolas, monospace;
+  --font-size-sm: 12px;
+  --font-size: 13px;
+  --font-size-lg: 14px;
+}
+
+/* ===== Dark Theme (default, no data-theme or data-theme="dark") ===== */
+:root,
+:root[data-theme="dark"] {
+  /* Chrome layer — lighter, visually recessed */
+  --title-bar-bg: #1F1F1F;
+  --activity-bar-bg: #1F1F1F;
+  --bg-secondary: #1F1F1F;
+  --status-bar-bg: #1F1F1F;
+  --tab-inactive-bg: #1F1F1F;
+
+  /* Content layer — darker, attention focus */
+  --bg-primary: #181818;
+  --tab-active-bg: #181818;
+  --terminal-bg: #181818;
+  --agent-code-bg: #181818;
+
+  /* Interactive layer */
+  --input-bg: #2B2B2B;
+  --bg-tertiary: #2B2B2B;
+  --bg-hover: #2A2D2E;
+  --bg-active: #37373D;
+  --accent-subtle: #1E3A5F;
+  --agent-user-bg: #2B2B2B;
+  --agent-bot-bg: transparent;
+  --agent-code-border: #3C3C3C;
+
+  /* Borders */
+  --border-color: #3C3C3C;
+  --border-light: #474747;
+
+  /* Text */
+  --text-primary: #CCCCCC;
+  --text-secondary: #999999;
+  --text-muted: #6A6A6A;
+
+  /* Accent */
+  --accent: #0078D4;
+  --accent-hover: #1A8AD4;
+
+  /* Status */
+  --color-success: #4EC94E;
+  --color-warning: #CCA700;
+  --color-error: #F14C4C;
+
+  /* Terminal */
+  --terminal-fg: #CCCCCC;
+  --terminal-selection: #264F78;
+
+  /* Scrollbar */
+  --scrollbar-thumb: #424242;
+  --scrollbar-track: transparent;
+}
+
+/* ===== Light Theme ===== */
+:root[data-theme="light"] {
+  /* Chrome layer */
+  --title-bar-bg: #ECECEC;
+  --activity-bar-bg: #ECECEC;
+  --bg-secondary: #F3F3F3;
+  --status-bar-bg: #ECECEC;
+  --tab-inactive-bg: #ECECEC;
+
+  /* Content layer */
+  --bg-primary: #FFFFFF;
+  --tab-active-bg: #FFFFFF;
+  --terminal-bg: #FFFFFF;
+  --agent-code-bg: #F9F9F9;
+
+  /* Interactive layer */
+  --input-bg: #FFFFFF;
+  --bg-tertiary: #F3F3F3;
+  --bg-hover: #E8E8E8;
+  --bg-active: #D6D6D6;
+  --accent-subtle: #D9EBFD;
+  --agent-user-bg: #F0F0F0;
+  --agent-bot-bg: transparent;
+  --agent-code-border: #D4D4D4;
+
+  /* Borders */
+  --border-color: #D4D4D4;
+  --border-light: #E5E5E5;
+
+  /* Text */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+
+  /* Accent */
+  --accent: #005FB8;
+  --accent-hover: #004A94;
+
+  /* Status */
+  --color-success: #388A34;
+  --color-warning: #997000;
+  --color-error: #D1242F;
+
+  /* Terminal */
+  --terminal-fg: #333333;
+  --terminal-selection: #ADD6FF;
+
+  /* Scrollbar */
+  --scrollbar-thumb: #C1C1C1;
+  --scrollbar-track: transparent;
+}
+
+/* ===== System-follow: when no data-theme, light mode via media query ===== */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --title-bar-bg: #ECECEC;
+    --activity-bar-bg: #ECECEC;
+    --bg-secondary: #F3F3F3;
+    --status-bar-bg: #ECECEC;
+    --tab-inactive-bg: #ECECEC;
+
+    --bg-primary: #FFFFFF;
+    --tab-active-bg: #FFFFFF;
+    --terminal-bg: #FFFFFF;
+    --agent-code-bg: #F9F9F9;
+
+    --input-bg: #FFFFFF;
+    --bg-tertiary: #F3F3F3;
+    --bg-hover: #E8E8E8;
+    --bg-active: #D6D6D6;
+    --accent-subtle: #D9EBFD;
+    --agent-user-bg: #F0F0F0;
+    --agent-bot-bg: transparent;
+    --agent-code-border: #D4D4D4;
+
+    --border-color: #D4D4D4;
+    --border-light: #E5E5E5;
+
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+
+    --accent: #005FB8;
+    --accent-hover: #004A94;
+
+    --color-success: #388A34;
+    --color-warning: #997000;
+    --color-error: #D1242F;
+
+    --terminal-fg: #333333;
+    --terminal-selection: #ADD6FF;
+
+    --scrollbar-thumb: #C1C1C1;
+    --scrollbar-track: transparent;
+  }
+}
